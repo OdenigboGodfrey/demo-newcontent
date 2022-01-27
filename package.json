@@ -1,6 +1,9 @@
 {
   "name": "newcontent",
   "version": "0.0.1",
+  "engines": {
+    "node": "14.17.6"
+  },
   "description": "",
   "author": "",
   "private": true,
@@ -19,7 +22,8 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "postinstall": "npm run prestart:prod"
+    "postinstall": "npm run prestart:prod",
+    "prestart:prod ": "rimraf dist && nest build"
   },
   "dependencies": {
     "@nestjs/common": "^8.0.0",
