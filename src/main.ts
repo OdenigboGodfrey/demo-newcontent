@@ -5,7 +5,8 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   //const app = await NestFactory.create(AppModule);
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
-  await app.listen(3010);
+  app.enableCors();
+  await app.listen(process.env.PORT || 3010);
   console.log('Server is up');
 }
 bootstrap();

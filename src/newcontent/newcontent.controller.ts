@@ -5,9 +5,9 @@ import {
   ApiResponse,
   ApiConsumes,
 } from '@nestjs/swagger';
-import { NewContentDTO } from 'src/dto/newcontent.dto';
-import { ResponseDTO } from 'src/dto/response.dto';
-import { statusEnum } from 'src/enums/util.enum';
+import { NewContentDTO } from './../../src/dto/newcontent.dto';
+import { ResponseDTO } from './../../src/dto/response.dto';
+import { statusEnum } from './../../src/enums/util.enum';
 import { NewcontentService } from './newcontent.service';
 
 @Controller('newcontent')
